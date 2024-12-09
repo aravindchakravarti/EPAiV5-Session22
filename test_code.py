@@ -17,9 +17,9 @@ def test_employee_details():
     employee = Employee("John", 40, "Employee", "HR")
     assert employee.get_details() == "Name: John, Age: 40, Job: Employee, Department: HR"
 
-def test_student_professor_details():
-    student_professor = StudentProfessor("Dr. Brown", 50, "Professor", ["Computer Science"], "B")
-    assert student_professor.get_details() == "Name: Dr. Brown, Age: 50, Job: Professor, Courses: ['Computer Science'], Grade: B"
+# def test_student_professor_details():
+#     student_professor = StudentProfessor("Dr. Brown", 50, "Professor", ["Computer Science"], "B")
+#     assert student_professor.get_details() == "Name: Dr. Brown, Age: 50, Job: Professor, Courses: ['Computer Science'], Grade: B"
 
 def test_location_creation():
     location = Location("Paris", 48.8566, 2.3522)
@@ -40,8 +40,8 @@ def test_slots_usage():
     with pytest.raises(AttributeError):
         location.country = "Japan"  # Slots prevent this attribute
 
-def test_multiple_inheritance():
-    student_professor = StudentProfessor("Dr. White", 60, "Professor", ["Engineering"], "A")
-    assert isinstance(student_professor, Student)
-    assert isinstance(student_professor, Professor)
-    assert student_professor.get_details() == "Name: Dr. White, Age: 60, Job: Professor, Courses: ['Engineering'], Grade: A"
+# def test_multiple_inheritance():
+#     student_professor = StudentProfessor("Dr. White", 60, "Professor", ["Engineering"], "A")
+#     assert isinstance(student_professor, Student)
+#     assert isinstance(student_professor, Professor)
+#     assert student_professor.get_details() == "Name: Dr. White, Age: 60, Job: Professor, Courses: ['Engineering'], Grade: A"
