@@ -14,8 +14,11 @@ The project implements the following class hierarchy:
 
 Person
 ├── Student
+
 ├── Professor
+
 ├── Employee
+
 └── StudentProfessor (inherits from both Student and Professor)
 
 ## Features
