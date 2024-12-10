@@ -13,6 +13,7 @@ This project demonstrates object-oriented programming concepts in Python, focusi
 The project implements the following class hierarchy:
 
 Person
+
 ├── Student
 
 ├── Professor
