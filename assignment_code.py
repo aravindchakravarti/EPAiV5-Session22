@@ -32,8 +32,18 @@ class Employee(Person):
     def get_details(self):
         return f"Name: {self.name}, Age: {self.age}, Job: {self.job}, Department: {self.department}"
 
-class StudentProfessor:
-    pass
+class StudentProfessor(Student, Professor):
+    def __init__(self, name, age, job, courses, grade):
+        # Initialize Person directly to avoid duplicate initialization
+        Person.__init__(self, name, age, job)
+        # Initialize specific attributes for Student and Professor
+        self.courses = courses
+        self.grade = grade
+
+    def get_details(self):
+        # Combine details from both Student and Professor
+        return (f"Name: {self.name}, Age: {self.age}, Job: {self.job}, "
+                f"Courses: {self.courses}, Grade: {self.grade}")
 
 class Location:
     __slots__ = ('name', 'latitude', 'longitude')
